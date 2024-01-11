@@ -1,0 +1,22 @@
+{
+  "name": "roni-s_business_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo050/Roni-s_business_website.git"
+  },
+  "author": "neoray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neo050/Roni-s_business_website/issues"
+  },
+  "homepage": "https://github.com/neo050/Roni-s_business_website#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
