@@ -1,41 +1,12 @@
-/* Styling for animated bubbles */
-.bubble {
-    width: 4cm;  /* Bubble diameter */
-    height: 4cm;
-    background-color: rgba(0, 123, 255, 0.7); /* Example color */
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-}
-
-.bubble-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
-@keyframes float {
-    0% {
-        transform: translateX(0);
-    } 
-    100% {
-        transform: translateX(100vw); /* Move bubbles across the width of the container */
-    }
-}
-
-.bubble {
-    animation: float 10s linear infinite;
-    animation-duration: calc(8s + 10s * var(--random));
-}
-
 /* Styling for static bubbles */
 .static-bubble {
     position: fixed;
-    bottom: 10%; /* Adjust as needed */
+    top: 50%; /* Adjusted for vertical centering */
+    transform: translateY(-50%); /* Center vertically */
     width: 4cm;
     height: 4cm;
-    /* Add more styling as required */
-    /* Example color */
+    background-color: rgba(0, 123, 255, 0.7); /* Example color */
+    border-radius: 50%; /* Makes the element a circle */
 }
 
 /* Positioning static bubbles */
@@ -44,3 +15,27 @@
 .static-bubble:nth-child(3) { left: 50%; }
 .static-bubble:nth-child(4) { left: 70%; }
 .static-bubble:nth-child(5) { left: 90%; }
+
+/* Styling for animated bubbles */
+.bubble {
+    width: 4cm;
+    height: 4cm;
+    background-color: rgba(255, 255, 255, 0.7); /* Example color - change as needed */
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px; /* Start off-screen */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh); /* Start from the bottom */
+    }
+    100% {
+        transform: translateY(-100vh); /* Move to the top */
+    }
+}
+
+.bubble {
+    animation: float linear infinite;
+    animation-duration: calc(10s + 15s * var(--random));
+}
