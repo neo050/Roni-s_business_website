@@ -20,7 +20,7 @@
 .bubble {
     width: 4cm;
     height: 4cm;
-    background-color: rgba(255, 255, 255, 0.7); /* Example color - change as needed */
+    background-color: rgba(11, 183, 17, 0.7); /* Example color - change as needed */
     border-radius: 50%;
     position: absolute;
     bottom: -100px; /* Start off-screen */
@@ -38,4 +38,8 @@
 .bubble {
     animation: float linear infinite;
     animation-duration: calc(10s + 15s * var(--random));
+}
+html
+{
+    background-color: black;
 }
